@@ -18,6 +18,8 @@ const Signup = () => {
     }
   };
 
+  console.log(user)
+
   return (
     <>
       <div className='w-full h-screen'>
