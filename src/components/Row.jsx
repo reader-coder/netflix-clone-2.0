@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react'
 import Movie from './Movie';
 import {MdChevronLeft, MdChevronRight} from 'react-icons/md'
 
+
 const Row = ({title, fetchURL, rowID}) => {
 
     const [movies, setMovies] = useState([]);
@@ -31,8 +32,8 @@ const Row = ({title, fetchURL, rowID}) => {
         <MdChevronLeft size={40} className='bg-white left-0 rounded-full absolute opacity-50 hover:opacity-100 cursor-pointer z-10 hidden group-hover:block' onClick={slideLeft}/>
         <div id={'slider'+rowID} className='w-full h-full overflow-x-scroll whitespace-nowrap scroll-smooth scrollbar-hide relative'>
             {
-                movies.map((movie,index)=>(
-                   <Movie key={index} movie={movie}/>
+                movies.map((movie,index)=>( 
+                  <Movie key={index} movie={movie}/>
                 ))
             }
         </div>

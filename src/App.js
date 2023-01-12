@@ -6,6 +6,7 @@ import Login from "./pages/Login";
 import Account from './pages/Account';
 import Signup from './pages/Signup';
 import ProtectedRoute from "./components/ProtectedRoute";
+import MovieDetails from "./components/MovieDetails";
 
 
 
@@ -16,9 +17,11 @@ function App() {
      <Navbar/>
      <Routes>
             <Route path='/' element={<Home/>}/>
+              <Route path=":movieId" element={<MovieDetails/>}>
+            </Route>
             <Route path="/login" element={<Login/>}/> 
             <Route path="/signup" element={<Signup/>}/>   
-            <Route path="/account" element={<ProtectedRoute><Account/></ProtectedRoute>}/>         
+            <Route path="/account" element={<ProtectedRoute><Account/></ProtectedRoute>}/>     
       </Routes>
      </AuthContextProvider>
     </>

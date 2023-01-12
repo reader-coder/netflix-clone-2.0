@@ -5,7 +5,7 @@ import requests from '../Requests'
 const Main = () => {
 
     const [movies, setMovies] = useState([])
-
+console.log(movies)
     const movie = movies[Math.floor(Math.random()*movies.length)]
     
     useEffect(()=>{
